@@ -18,12 +18,12 @@ function App() {
         <br/>
         <Link to="/friends-list">Friends List</Link>
         <br/>
-        <Link to="/add-friend">Add Friend</Link>
+        <Link to="/friends/add">Add Friend</Link>
         <br/>
         <Link to="/logout">Logout</Link>
       </div>
       <Switch>
-        <Route exact path="/add-friend" component={AddFriend}/>
+        <Route exact path="/friends/add" component={AddFriend}/>
         <Route exact path="/friends-list" component={FriendsList}/>
         <Route path="/login" component={Login}/>
         <Route path="/" />
