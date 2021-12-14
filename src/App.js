@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios'
-import credentials from './mocks/credentials';
 import Login from './components/Login';
 import FriendsList from './components/FriendsList';
 import AddFriend from './components/AddFriend';

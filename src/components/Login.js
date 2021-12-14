@@ -25,12 +25,11 @@ class Login extends React.Component {
         e.preventDefault();
         axios.post('http://localhost:9000/api/login', this.state.credentials)
         .then(resp => {
-            console.log(resp)
-            // const { token, role, username } = resp.data;
-            // localStorage.setItem("token", token);
-            // localStorage.setItem("role", role);
-            // localStorage.setItem("username", username);
-            // this.props.history.push('/friends-list');
+            const { role, token, username } = resp.data;
+            localStorage.setItem("token", token);
+            localStorage.setItem("role", role);
+            localStorage.setItem("username", username);
+            this.props.history.push('/friends-list');
         })
         .catch(err => {
           console.error(err)
@@ -48,7 +47,7 @@ class Login extends React.Component {
             <input 
             type='text'
             name='username'
-            value={this.state.username}
+            value={this.state.credentials.username}
             onChange={this.handleChange}
             />
           </label>
@@ -57,9 +56,9 @@ class Login extends React.Component {
           <label>PASSWORD:
           <br />
             <input 
-            type='text'
+            type='password'
             name='password'
-            value={this.state.password}
+            value={this.state.credentials.password}
             onChange={this.handleChange}
             />
           </label>
