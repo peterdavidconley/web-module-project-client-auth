@@ -51,11 +51,20 @@
 
 
 .login {
-  padding: 3%;
+  padding: 1%;
   border: solid black 2px;
   margin: 2% 20%;
 }
 
 .login-form input {
+  margin: 2%;
+  background-color: black;
+  padding: 1% 8%;
+}
+
+.login-form button {
   margin: 1%;
+  background-color: black;
+  color: white;
+  padding: 2%;
 }

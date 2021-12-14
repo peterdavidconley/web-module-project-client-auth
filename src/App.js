@@ -16,21 +16,21 @@ function App() {
         <Link to="/logout">Logout</Link>
       </div>
       <div className='login'>
-        <h2>LOGIN</h2>
+        <h1>LOGIN</h1>
         <form className='login-form'>
           <center>
           <label>USERNAME:
+          <br />
             <input 
             type='text'
-            placeholder='enter your username'
             />
           </label>
           </center>
           <center>
           <label>PASSWORD:
+          <br />
             <input 
             type='text'
-            placeholder='enter your password'
             />
           </label>
           </center>
