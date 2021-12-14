@@ -1,8 +1,13 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import axios from 'axios'
+import credentials from './mocks/credentials';
+import Login from './components/Login';
 
 function App() {
+
+
   return (
     <div className="App">
       <div className='heading'>
@@ -15,30 +20,7 @@ function App() {
         <br/>
         <Link to="/logout">Logout</Link>
       </div>
-      <div className='login'>
-        <h1>LOGIN</h1>
-        <form className='login-form'>
-          <center>
-          <label>USERNAME:
-          <br />
-            <input 
-            type='text'
-            />
-          </label>
-          </center>
-          <center>
-          <label>PASSWORD:
-          <br />
-            <input 
-            type='text'
-            />
-          </label>
-          </center>
-          <center>
-          <button>SUBMIT</button>
-          </center>
-        </form>
-      </div>
+      <Login />
       <Switch>
         <Route path="/login" />
         <Route path="/" />

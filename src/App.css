@@ -39,8 +39,8 @@
 
 .heading {
   display: flex;
-  justify-content: space-between;
-  padding: 3%;
+  justify-content: space-around;
+  padding: 1% 3%;
 }
 
 .heading a {
