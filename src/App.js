@@ -7,24 +7,15 @@ function App() {
     <div className="App">
       <div className='heading'>
         <h3>Friends Database</h3>
-        <div className='header-links'>
-        <ul>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/friends-list">Friends List</Link>
-            </li>
-            <li>
-              <Link to="/add-friend">Add Friend</Link>
-            </li>
-            <li>
-              <Link to="/logout">Logout</Link>
-            </li>
-        </ul>    
-        </div>
+        <Link to="/login">Login</Link>
+        <br/>
+        <Link to="/friends-list">Friends List</Link>
+        <br/>
+        <Link to="/add-friend">Add Friend</Link>
+        <br/>
+        <Link to="/logout">Logout</Link>
       </div>
-      <div >
+      <div className='login'>
         <h2>LOGIN</h2>
         <form className='login-form'>
           <center>

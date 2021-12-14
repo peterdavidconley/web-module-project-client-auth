@@ -39,19 +39,21 @@
 
 .heading {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3%;
 }
 
-ul {
-  display: flex;
-  justify-content: space-around;
-  margin: 10px;
-  padding: 12px;
+.heading a {
+  background-color: black;
+  color: white;
+  padding: 2%;
 }
+
 
 .login {
   padding: 3%;
   border: solid black 2px;
+  margin: 2% 20%;
 }
 
 .login-form input {
