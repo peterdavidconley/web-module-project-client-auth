@@ -39,13 +39,13 @@ Each friend object has the format:
 * [x] cd into the project base directory `cd web-module-project-client-auth`
 * [x] Download project dependencies by running `npm install`
 * [x] cd into the `server` folder.
-* [ ] Start up the app using `npm start` to start the server.
-* [ ] cd into the `friends` folder.
-* [ ] Run `npm start` to start the client code.
+* [x] Start up the app using `npm start` to start the server.
+* [x] cd into the `friends` folder.
+* [x] Run `npm start` to start the client code.
 
 ### Task 2: Project Requirements
 #### Build the login component
-* [ ] Use the [mockup provided](./login_mockup.png) to build out a simple login component.
+* [x] Use the [mockup provided](./login_mockup.png) to build out a simple login component.
 * [ ] In `App.js`, add a route to allow this component to be displayed when navigating to `/` or `/login`
 * [ ] When submitting your login form, save the token returned to localStorage and redirect to the FriendsList route.
 
