@@ -5,24 +5,24 @@ import '../App.css';
 class AddFriend extends React.Component {
 
     state = {
-        credentials: {
-          username: '',
-          password: ''
+        newFriend: {
+          friend: '',
+          email: ''
         }
       };
 
       handleChange = e => {
         this.setState({
             credentials: {
-              ...this.state.credentials,
+              ...this.state.newFriend,
               [e.target.name]: e.target.value
             }
           });
       };
 
-      login = (e) => {
+      newFriend = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:9000/api/friends', this.state.credentials)
+        axios.post('http://localhost:9000/api/friends', this.state.newFriend)
         .then(resp => {
             console.log(resp)
         })
@@ -35,13 +35,15 @@ class AddFriend extends React.Component {
         return(
         <div className='login'>
         <h1>ADD FRIEND</h1>
-        <form className='login-form'>
+        <form className='login-form' onSubmit={this.newFriend}>
           <center>
           <label>FRIEND NAME:
           <br />
             <input 
             type='text'
-            name='friend-name'
+            name='friend'
+            onChange={this.handleChange}
+            value={this.state.newFriend.friend}
             />
           </label>
           </center>
@@ -50,7 +52,9 @@ class AddFriend extends React.Component {
           <br />
             <input 
             type='text'
-            name='password'
+            name='email'
+            onChange={this.handleChange}
+            value={this.state.newFriend.email}
             />
           </label>
           </center>
