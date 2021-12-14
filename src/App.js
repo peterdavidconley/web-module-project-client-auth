@@ -5,6 +5,7 @@ import axios from 'axios'
 import credentials from './mocks/credentials';
 import Login from './components/Login';
 import FriendsList from './components/FriendsList';
+import AddFriend from './components/AddFriend';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Link to="/logout">Logout</Link>
       </div>
       <Switch>
+        <Route exact path="/add-friend" component={AddFriend}/>
         <Route exact path="/friends-list" component={FriendsList}/>
         <Route path="/login" component={Login}/>
         <Route path="/" />
