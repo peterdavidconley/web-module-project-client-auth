@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios'
 import credentials from './mocks/credentials';
 import Login from './components/Login';
+import FriendsList from './components/FriendsList';
 
 function App() {
 
@@ -20,9 +21,9 @@ function App() {
         <br/>
         <Link to="/logout">Logout</Link>
       </div>
-      <Login />
       <Switch>
-        <Route path="/login" />
+        <Route exact path="/friends-list" component={FriendsList}/>
+        <Route path="/login" component={Login}/>
         <Route path="/" />
       </Switch>
     </div>

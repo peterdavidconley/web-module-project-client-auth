@@ -2,8 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import '../App.css';
 
-
-class Login extends React.Component {
+class AddFriend extends React.Component {
 
     state = {
         credentials: {
@@ -14,23 +13,18 @@ class Login extends React.Component {
 
       handleChange = e => {
         this.setState({
-          credentials: {
-            ...this.state.credentials,
-            [e.target.name]: e.target.value
-          }
-        });
+            credentials: {
+              ...this.state.credentials,
+              [e.target.name]: e.target.value
+            }
+          });
       };
 
       login = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:9000/api/login', this.state.credentials)
+        axios.post('http://localhost:9000/api/friends', this.state.credentials)
         .then(resp => {
             console.log(resp)
-            // const { token, role, username } = resp.data;
-            // localStorage.setItem("token", token);
-            // localStorage.setItem("role", role);
-            // localStorage.setItem("username", username);
-            // this.props.history.push('/friends-list');
         })
         .catch(err => {
           console.error(err)
@@ -40,27 +34,23 @@ class Login extends React.Component {
     render() {
         return(
         <div className='login'>
-        <h1>LOGIN</h1>
-        <form className='login-form' onSubmit={this.login}>
+        <h1>ADD FRIEND</h1>
+        <form className='login-form'>
           <center>
-          <label>USERNAME:
+          <label>FRIEND NAME:
           <br />
             <input 
             type='text'
-            name='username'
-            value={this.state.username}
-            onChange={this.handleChange}
+            name='friend-name'
             />
           </label>
           </center>
           <center>
-          <label>PASSWORD:
+          <label>FRIEND EMAIL:
           <br />
             <input 
             type='text'
             name='password'
-            value={this.state.password}
-            onChange={this.handleChange}
             />
           </label>
           </center>
@@ -73,4 +63,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login
+export default AddFriend
