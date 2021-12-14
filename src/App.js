@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <div className='heading'>
         <h3>Friends Database</h3>
+        <div className='header-links'>
         <ul>
             <li>
               <Link to="/login">Login</Link>
@@ -21,23 +22,30 @@ function App() {
               <Link to="/logout">Logout</Link>
             </li>
         </ul>    
+        </div>
       </div>
-      <div className='login-form'>
+      <div >
         <h2>LOGIN</h2>
-        <form>
+        <form className='login-form'>
+          <center>
           <label>USERNAME:
             <input 
             type='text'
             placeholder='enter your username'
             />
           </label>
+          </center>
+          <center>
           <label>PASSWORD:
             <input 
             type='text'
             placeholder='enter your password'
             />
           </label>
+          </center>
+          <center>
           <button>SUBMIT</button>
+          </center>
         </form>
       </div>
       <Switch>

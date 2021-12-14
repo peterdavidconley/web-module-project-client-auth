@@ -39,8 +39,21 @@
 
 .heading {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.login-form {
-  
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 12px;
+}
+
+.login {
+  padding: 3%;
+  border: solid black 2px;
+}
+
+.login-form input {
+  margin: 1%;
 }
